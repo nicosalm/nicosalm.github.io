@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SideBar from '../components/SideBar.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+const {
+	image,
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script is:inline>
+			let date = new Date();
+			//write a script to change the theme using themeChange if the hour is greater than 11
+			//base: make sure to check if its still dark at +00 UTC
+			if (parseInt(date.getHours()) >= 7 && parseInt(date.getHours()) <= 16) {
+				document.documentElement.setAttribute('data-theme', 'emerald');
+			} else {
+				document.documentElement.setAttribute('data-theme', 'forest');
+			}
+		</script>
+		<BaseHead title={title} description={description} image={image} />
+	</head>
+	<body>
+		<div class="bg-base-100 drawer drawer-mobile">
+			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+			<div class="drawer-content flex flex-col bg-base-100">
+				<Header title={SITE_TITLE} />
+				<div class="md:flex md:justify-center">
+					<main class="p-6 pt-10 max-w-[900px]">
+						<slot />
+					</main>
+				</div>
+				<Footer />
+			</div>
+			<SideBar />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/cv/TimeLine.astro';
+import TimeLineLite from '../components/cv/TimeLineLite.astro';
+import TimeLineExp from '../components/cv/TimeLineExp.astro';
+---
+
+<BaseLayout title="Resume">
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold whitespace-pre-line">Resume</div>
+	</div>
+	<div class="whitespace-pre-line">
+		My skillset is highly sought-after in the computer science and data engineering
+		industries. My proficiency in data analytics, project management, and process 
+		improvement, combined with technical expertise in programming and software 
+		development, makes me an ideal candidate for roles involving data-driven 
+		decision-making, software development, and project management. My ability to 
+		lead cross-functional teams and deliver results through effective communication
+		and collaboration also positions me well for leadership roles in these industries.
+		{/* prettier-ignore */}
+		With my diverse skillset and ability to adapt to new technologies and challenges,
+		I believe I am well-equipped to thrive in the fast-paced and dynamic world of 
+		computer science and data engineering and produce real results for you!
+	</div>
+	
+	<br />
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Education</div>
+	</div>
+
+	<div class="time-line-container grid gap-4 mb-10 font-normal">
+		<!-- <TimeLineLite
+			title="High School Diploma"
+			school="Gibraltar High School"
+			subtitle=""
+		/> -->
+		<TimeLineElement
+			title="B.sc Computer Sciences"
+			school="University of Wisconsin - Madison, 2022-2026"
+			subtitle="Executive Board (leadership position) for the Wisconsin Quantum Computing Club."
+		/>
+	</div>
+
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Experience</div>
+	</div>
+
+	<div class="time-line-container mb-10">
+		<TimeLineExp
+			company="UW-Madison Department of Materials Science and Engineering"
+			title="Research Assistant (Materials Informatics), May 2021 - Aug 2021 (Madison, WI)"
+			desc="Refactored machine learning models for materials properties and shared them as cloud resources through Cloud Foundry infrastructure, boosting accessibility of a key resource for the materials community by 90%. Implemented standard machine learning models through scikit-learn and pytorch."
+			desc2="Worked with PyTorch and Scikit-learn to run models locally before Dockerizing and deploying them to Cloud Foundry, gaining valuable experience with containerization and cloud infrastructure."
+		/>
+		<!-- <br /> -->
+	</div>
+
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Skills</div>
+	</div>
+
+	<ul class="list-disc md:columns-5 columns-2 mx-6">
+		<li>JavaScript</li>
+		<li>Python</li>
+		<li>Java</li>
+		<li>C</li>
+		<li>C++</li>
+		<li>x86 Assembly</li>
+		<li>TypeScript</li>
+		<li>Go</li>
+		<li>ReactJS</li>
+		<li>React Native</li>
+		<li>Gatsby</li>
+		<li>Astro</li>
+		<li>NodeJS</li>
+		<li>ExpressJS</li>
+		<li>PostgreSQL</li>
+	</ul>
+</BaseLayout>
