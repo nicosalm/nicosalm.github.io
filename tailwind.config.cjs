@@ -15,6 +15,7 @@ module.exports = {
 					},
 				},
 
+				
 				forest: {
 					...require('daisyui/src/colors/themes')['[data-theme=business]'],
 					'.sidebar': {
