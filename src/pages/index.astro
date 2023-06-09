@@ -5,112 +5,117 @@ import index from "../styles/index.css";
 import SkillBlock from "../components/SkillBlock.astro";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 );
 
 const last_posts = posts.slice(0, 3);
 ---
+
 <BaseLayout>
-
-    <div class="pb-12 mt-5">
-      <div class="text-5xl font-bold ">
-        <span class="type">
+  <div class="pb-12 mt-5">
+    <div class="text-5xl font-bold">
+      <span class="type">
         <style>
-            .type {
-              display: inline-block;
-              vertical-align: bottom;
-            }
+          .type {
+            display: inline-block;
+            vertical-align: bottom;
+          }
 
-            .type > span {
-              display: grid;
-              overflow: hidden;
-              height: 1em;
-            }
+          .type > span {
+            display: grid;
+            overflow: hidden;
+            height: 1em;
+          }
 
-            .type span span {
-              width: 0%;
-              max-width: max-content;
-              overflow: hidden;
-              height: inherit;
-              word-break: break-all;
-              animation: c 0.5s infinite steps(1), t 3s linear infinite alternate,
-                m 18s steps(3) infinite;
-            }
-            .type span span:before {
-              content: " ";
-              display: inline-block;
-            }
+          .type span span {
+            width: 0%;
+            max-width: max-content;
+            overflow: hidden;
+            height: inherit;
+            word-break: break-all;
+            animation: c 0.5s infinite steps(1), t 3s linear infinite alternate,
+              m 18s steps(3) infinite;
+          }
+          .type span span:before {
+            content: " ";
+            display: inline-block;
+          }
 
-            @keyframes t {
-              90%,
-              100% {
-                width: 100%;
-              }
+          @keyframes t {
+            90%,
+            100% {
+              width: 100%;
             }
+          }
 
-            @keyframes c {
-              0%,
-              100% {
-                box-shadow: 5px 0 0 #0000;
-              }
-              50% {
-                box-shadow: 5px 0 0 rgb(74, 222, 128);
-              }
+          @keyframes c {
+            0%,
+            100% {
+              box-shadow: 5px 0 0 #0000;
             }
+            50% {
+              box-shadow: 5px 0 0 rgb(74, 222, 128);
+            }
+          }
 
-            @keyframes m {
-              100% {
-                transform: translateY(-300%);
-              }
+          @keyframes m {
+            100% {
+              transform: translateY(-300%);
             }
+          }
         </style>
         <span>
           <span>Hi, I'm Nico 👋</span>
           <span>I love to create.</span>
           <span>Let's team up! 🚀</span>
         </span>
-        </span>
-      </div>
-      <div class="text-3xl py-3 font-bold">CS @ University of Wisconsin</div>
-      <div class="py-2">
-        <text class="whitespace-pre-line text-lg">
-          Hi – I'm Nico! I'm a student at the University of Wisconsin–Madison and in my time here I've had the opportunity to meet amazing, talented people and participate in learning experiences that have left me hungry for more. I strive to contribute tangible change through technology.
-          
-        </text>
-        <text class="whitespace-pre-line text-lg">This semester, I am wrapping up the fundamentals and getting a head-start on applying machine learning. I'm using ML to solve real problems in informatics by developing a project to boost accessibility of these revolutionary ML resources for researchers.
-        
-        </text>
-        <text class="whitespace-pre-line text-lg">I'm excited to see where this journey takes me. I'm working on some cool projects behind the scenes, too. Technology is exponential, and I'm excited to ride the wave to the top 🌊🤘
-        </text>
-        </div>
-
+      </span>
     </div>
-
-
-    <SkillBlock
-    />
-
-    <div class="mt-24"></div>
-
-    <div>
-      <div class="text-3xl w-full font-bold mb-2">Latest Projects</div>
+    <div class="text-3xl py-3 font-bold">CS @ University of Wisconsin</div>
+    <div class="py-2">
+      <text class="whitespace-pre-line text-lg">
+        Hi – I'm Nico! I'm a student at the University of Wisconsin–Madison and
+        in my time here I've had the opportunity to meet amazing, talented
+        people and participate in learning experiences that have left me hungry
+        for more. I strive to contribute tangible change through technology.
+      </text>
+      <text class="whitespace-pre-line text-lg"
+        >This semester, I am wrapping up the fundamentals and getting a
+        head-start on applying machine learning. I'm using ML to solve real
+        problems in informatics by developing a project to boost accessibility
+        of these revolutionary ML resources for researchers.
+      </text>
+      <text class="whitespace-pre-line text-lg"
+        >I'm excited to see where this journey takes me. I'm working on some
+        cool projects behind the scenes, too. Technology is exponential, and I'm
+        excited to ride the wave to the top 🌊🤘
+      </text>
     </div>
+  </div>
 
-    <HorizontalCard
-		title="Paper++"
-		img="public/paperplusplus.png"
-		desc="Designed as a solution for MadHacks 2023 to parse handwritten user-provided images (utilizing Google OCR API), execute the handwritten code, and provide output through a beautiful frontend built with React, Bootstrap and Axios."
-		url="https://github.com/Paper-Plus-Plus/PaperPlusPlus"
-	  />
-  	<div class="divider my-0"></div>
+  <div class="mt-18"></div>
 
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects</div>
+  </div>
 
-    <div>
-      <div class="text-3xl w-full font-bold mb-5 mt-10">Latest Posts</div>
-    </div>
+  <HorizontalCard
+    title="Paper++"
+    img="public/paperplusplus.png"
+    desc="Designed as a solution for MadHacks 2023 to parse handwritten user-provided images (utilizing Google OCR API), execute the handwritten code, and provide output through a beautiful frontend built with React, Bootstrap and Axios."
+    url="https://github.com/Paper-Plus-Plus/PaperPlusPlus"
+  />
+  <div class="divider my-0"></div>
 
-    {
-      last_posts.map((post) => (
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest Posts</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
         <HorizontalCard
           title={post.frontmatter.title}
           img={post.frontmatter.heroImage}
@@ -118,8 +123,8 @@ const last_posts = posts.slice(0, 3);
           url={post.url}
           target="_self"
         />
-        <div class="divider my-0"></div>
-      ))
-    }
-
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 </BaseLayout>
