@@ -3,10 +3,8 @@ layout: "../../layouts/PostLayout.astro"
 title: "Unleashing the Potential of Data-Driven Analytics and Machine Learning for Small-to-Medium Sized Businesses"
 description: "Discover the transformative potential of data-driven analytics and machine learning, propelling small-to-medium sized businesses towards unprecedented efficiency and a strategic advantage."
 pubDate: "June 15 2023"
-heroImage: "public/1.1.png"
+heroImage: "https://successive.cloud/wp-content/uploads/2022/04/Data-Analytics-Benefits-768x403.png"
 ---
-
-![](https://successive.cloud/wp-content/uploads/2022/04/Data-Analytics-Benefits-768x403.png)
 
 ### Introduction:
 
