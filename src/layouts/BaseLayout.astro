@@ -21,9 +21,9 @@ const {
 			//write a script to change the theme using themeChange if the hour is greater than 11
 			//base: make sure to check if its still dark at +00 UTC
 			if (parseInt(date.getHours()) >= 7 && parseInt(date.getHours()) <= 16) {
-				document.documentElement.setAttribute('data-theme', 'emerald');
+				document.documentElement.setAttribute('data-theme', 'day');
 			} else {
-				document.documentElement.setAttribute('data-theme', 'forest');
+				document.documentElement.setAttribute('data-theme', 'night');
 			}
 		</script>
 		<BaseHead title={title} description={description} image={image} />

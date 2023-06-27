@@ -8,16 +8,16 @@ module.exports = {
 	daisyui: {
 		themes: [
 			{
-				emerald: {
-					...require('daisyui/src/colors/themes')['[data-theme=emerald]'],
+				day: {
+					...require('daisyui/src/colors/themes')['[data-theme=cupcake]'],
 					'.sidebar': {
 						'background-color': '#F9FAFB',
 					},
 				},
 
 				
-				forest: {
-					...require('daisyui/src/colors/themes')['[data-theme=business]'],
+				night: {
+					...require('daisyui/src/colors/themes')['[data-theme=night]'],
 					'.sidebar': {
 						'background-color': 'hsl(var(--b2))',
 					},
