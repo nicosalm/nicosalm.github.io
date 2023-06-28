@@ -11,13 +11,13 @@ module.exports = {
 				day: {
 					...require('daisyui/src/colors/themes')['[data-theme=cupcake]'],
 					'.sidebar': {
-						'background-color': '#F9FAFB',
+						'background-color': 'hsl(var(--b2))',
 					},
 				},
 
 				
 				night: {
-					...require('daisyui/src/colors/themes')['[data-theme=night]'],
+					...require('daisyui/src/colors/themes')['[data-theme=forest]'],
 					'.sidebar': {
 						'background-color': 'hsl(var(--b2))',
 					},
