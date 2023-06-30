@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, target = '_blank' } = Astro.props;
+const { title, subtitle, img, desc, url, badge, tags, target = '_blank' } = Astro.props;
 ---
 
 <div
@@ -17,6 +17,7 @@ const { title, img, desc, url, badge, tags, target = '_blank' } = Astro.props;
 					{title}
 					{badge && <div class="badge badge-secondary mx-2">{badge}</div>}
 				</h1>
+				<p class="py-1 text-sm font-style text-opacity-80">{subtitle}</p>
 				<p class="py-1 text-1xl">{desc}</p>
 				<div class="card-actions justify-end">
 					{
