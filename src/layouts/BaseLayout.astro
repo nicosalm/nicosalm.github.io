@@ -18,10 +18,9 @@ const {
 	<head>
 		<script is:inline>
 			let date = new Date();
-			//write a script to change the theme using themeChange if the hour is greater than 11
-			//base: make sure to check if its still dark at +00 UTC
-			if (parseInt(date.getHours()) >= 7 && parseInt(date.getHours()) <= 16) {
+			if (parseInt(date.getHours()) >= 7 && parseInt(date.getHours()) <= 20) {
 				document.documentElement.setAttribute('data-theme', 'day');
+			// dark mode active from 8pm to 7am 
 			} else {
 				document.documentElement.setAttribute('data-theme', 'night');
 			}
